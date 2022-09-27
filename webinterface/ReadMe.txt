@@ -1,4 +1,4 @@
-welcome to the webinterface!
+Welcome to the webinterface!
 
 To test your dataset, you have to take the following steps:
 1. Open and run the file "Server.ipynb" (keep it open)
