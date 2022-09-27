@@ -1,0 +1,15 @@
+*.ipynb_checkpoints/
+*__pycache__/
+*_build/
+*.nbgrader.log
+*.swp
+*.DS_Store
+*octave-workspace
+*.local
+*.cache
+*.config
+*.ipython
+*.jupyter
+*.local
+*.npm
+*.bash_history

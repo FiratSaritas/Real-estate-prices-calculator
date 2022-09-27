@@ -1,0 +1,74 @@
+  
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+
+<head>
+    <title>Immobilienrechner</title>
+</head>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input Werte:</legend>
+        Wohnflaeche:
+        <input name="AreaLiving" type="number" required>
+        <br>
+        <br> Grundstueck:
+        <input name="AreaProperty" type="number" required>
+        <br>
+        <br> Baujahr:
+        <input name="BuiltYear" type="number" required>
+        <br>
+        <br> Zimmer
+        <input name="Rooms" type="number" required>
+        <br>
+        <br> Postleitzahl:
+        <input name="Zip" type="number" required>
+        <br>
+        <br> Gebaeudeart:
+	<select name="RealEstateTypeId" id="RealEstateTypeId" required>
+	  <option value="Haus">Haus</option>
+	  <option value="Reihenhaus">Reihenhaus</option>
+	  <option value="Doppelhaus">Doppelhaus</option>
+	  <option value="Mehrfamilienhaus">Mehrfamilienhaus</option>
+	  <option value="Terassenhaus">Terassenhaus</option>
+	  <option value="Anderes Haus">AnderesHaus</option>
+	  <option value="Wohnung">Wohnung</option>
+	  <option value="Attikawohnung">Attikawohnung</option>
+	  <option value="Maisonettewohnung">Maisonettewohnung</option>
+	  <option value="Loftwohnung">Loftwohnung</option>
+	  <option value="Zimmer">Zimmer</option>
+	</select>
+        <br>
+        <br> Renoviert:
+	<select name="Renovationyear" id="Renovationyear" required>
+	  <option value="Ja">Ja</option>
+	  <option value="Nein">Nein</option>
+	</select>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+<br>
+<div class="result" align="center">
+    {% if result %}
+    	{% for variable, value in original_input.items() %}
+    		<b>{{ variable }}</b> : {{ value }}
+    	{% endfor %}
+		<br>
+    	<br> Predicted Purchase Price:
+   		<p style="font-size:40px">{{ result }}</p>
+    {% endif %}
+</div>
+
+</html>
