@@ -1,7 +1,7 @@
 # Real-estate-prices-calculator
 
 Where to find what:
-- **DocF**: Contains our NB as PDF reports 
+- **Doc**: Contains our NB as PDF reports 
 - **data**: Contains provided data for challenge
 - **eda**: Notebooks for Exploratory Data Analysis 
 - **model**: All notebooks and files regarding to our model building and submits for the Kaggle-Challenge 
